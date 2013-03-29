@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+PHANTOMJS_URL="https://phantomjs.googlecode.com/files/phantomjs-1.9.0-linux-x86_64.tar.bz2"
+
+mkdir -p phantomjs
+curl --silent --location $PHANTOMJS_URL | tar -xj -C phantomjs --strip-components 1
+
+# phantomjs settings
+PROFILE_PATH="$BUILD_DIR/.profile.d/phantomjs.sh"
+mkdir -p $(dirname $PROFILE_PATH)
+echo 'export PATH="phantomjs/bin:$PATH"' >> $PROFILE_PATH
