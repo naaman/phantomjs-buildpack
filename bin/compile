@@ -11,8 +11,9 @@ CACHE_DIR=$2
 
 # setup phantomjs
 PHANTOMJS_URL="https://phantomjs.googlecode.com/files/phantomjs-1.9.0-linux-x86_64.tar.bz2"
+PHANTOMJS_DIR=$BUILD_DIR/phantomjs
 
-mkdir -p phantomjs
+mkdir -p $PHANTOMJS_DIR
 curl --silent --location $PHANTOMJS_URL | tar -xj -C phantomjs --strip-components 1
 
 # phantomjs settings
