@@ -14,7 +14,7 @@ PHANTOMJS_URL="https://phantomjs.googlecode.com/files/phantomjs-1.9.0-linux-x86_
 PHANTOMJS_DIR=$BUILD_DIR/phantomjs
 
 mkdir -p $PHANTOMJS_DIR
-curl --silent --location $PHANTOMJS_URL | tar -xj -C phantomjs --strip-components 1
+curl --silent --location $PHANTOMJS_URL | tar -xj -C $BUILD_DIR/phantomjs --strip-components 1
 
 # phantomjs settings
 PROFILE_PATH="$BUILD_DIR/.profile.d/phantomjs.sh"
